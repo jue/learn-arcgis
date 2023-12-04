@@ -21,6 +21,7 @@ declare module 'vue' {
     ElLink: typeof import('element-plus/es')['ElLink']
     ElScrollbar: typeof import('element-plus/es')['ElScrollbar']
     ElTooltip: typeof import('element-plus/es')['ElTooltip']
+    Header: typeof import('./src/components/Header.vue')['default']
     'IconIc:baselineKey': typeof import('~icons/ic/baseline-key')['default']
     'IconIc:baselinePhoneIphone': typeof import('~icons/ic/baseline-phone-iphone')['default']
     'IconIc:baselineWechat': typeof import('~icons/ic/baseline-wechat')['default']
