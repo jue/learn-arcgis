@@ -1,0 +1,49 @@
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+  $colors: (
+    'primary': (
+      'base': rgba(4, 120, 87, 1),
+    ),
+  ),
+  $text-color: (
+    'regular': '#181f38',
+  ),
+  $border-radius: (
+    'base': 8px,
+  ),
+  $button: (
+    'font-weight': 400,
+  ),
+  $menu: (
+    'item-height': 40px,
+    'sub-item-height': 40px,
+    'base-level-padding': 16px,
+    'level-padding': 29px,
+  ),
+  $dialog: (
+    'title-font-size': 16px,
+    'padding-primary': 16px,
+    'border-radius': 0px,
+    'font-line-height': 48px,
+
+  ),
+  $upload: (
+    'dragger-padding-horizonta': 80px,
+  ),
+  $link: (
+    'font-weight': 400,
+  ),
+  $drawer: (
+    'padding-primary': 0
+  ),
+  $pagination: (
+    'button-width': 28px,
+    'button-height': 28px,
+  ),
+  $input: (
+    'bg-color': '#edf1f6',
+  ),
+  $dropdown: (
+    'menuItem-hover-color': '#00021bf8',
+    'menuItem-hover-fill': '#edf1f6',
+  ),
+);
