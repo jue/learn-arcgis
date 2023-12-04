@@ -7,6 +7,7 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    ArcGisMap: typeof import('./src/components/ArcGisMap.vue')['default']
     AuthPassword: typeof import('./src/components/auth/password.vue')['default']
     AuthSignup: typeof import('./src/components/auth/signup.vue')['default']
     AuthWechat: typeof import('./src/components/auth/wechat.vue')['default']

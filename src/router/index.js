@@ -14,35 +14,35 @@ const router = createRouter({
   routes: defaultRouter,
 })
 
-const whiteList = ['/login', '/signup', '/wechat/login']
+// const whiteList = ['/login', '/signup', '/wechat/login']
 
-router.beforeEach(async (to, from, next) => {
-  const userStore = useUserStore()
+// router.beforeEach(async (to, from, next) => {
+//   const userStore = useUserStore()
 
-  if (whiteList.includes(to.path)) {
-    next()
-    return
-  }
+//   if (whiteList.includes(to.path)) {
+//     next()
+//     return
+//   }
 
-  const hasToken = getToken()
-  if (hasToken) {
-    if (!userStore.user)
-      await userStore.userInfo()
+//   const hasToken = getToken()
+//   if (hasToken) {
+//     if (!userStore.user)
+//       await userStore.userInfo()
 
-    next()
-  }
-  else {
-    if (isWeixin())
-      location.href = `https://wx.jue.sh/wechat/mp/authorize?redirect_uri=${to.fullPath}`
+//     next()
+//   }
+//   else {
+//     if (isWeixin())
+//       location.href = `https://wx.jue.sh/wechat/mp/authorize?redirect_uri=${to.fullPath}`
 
-    else
-      next(`/login?redirect=${to.fullPath}`)
-  }
-})
+//     else
+//       next(`/login?redirect=${to.fullPath}`)
+//   }
+// })
 
-router.afterEach((to, from) => {
-  const settingsStore = useSettingsStore()
-  document.title = to.meta.title ?? settingsStore.title
-})
+// router.afterEach((to, from) => {
+//   const settingsStore = useSettingsStore()
+//   document.title = to.meta.title ?? settingsStore.title
+// })
 
 export default router

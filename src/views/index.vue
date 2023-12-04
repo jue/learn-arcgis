@@ -1,3 +1,3 @@
 <template>
-  <div>DEV</div>
+  <ArcGisMap />
 </template>
