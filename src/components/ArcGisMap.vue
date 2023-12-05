@@ -21,8 +21,8 @@ const routeLayer = new RouteLayer({
 
 const map = new Map({
   // basemap: 'streets-navigation-vector',
-  basemap: 'arcgis-navigation',
-  // basemap: setTianditu(),
+  // basemap: 'arcgis-navigation',
+  basemap: setTianditu(),
   layers: [routeLayer],
 })
 
@@ -38,15 +38,15 @@ setpoint(map)
 mapView.ui.components = []
 
 // 定位
-setLocate(mapView)
+// setLocate(mapView)
 
 onMounted(async () => {
   mapView.container = mapDiv.value
 
-  // await Promise.all([mapView.when(), routeLayer.load()])
-  // const results = await routeLayer.solve({ apiKey: esriConfig.apiKey })
-  // routeLayer.update(results)
-  // await mapView.goTo(routeLayer.routeInfo.geometry)
+  await Promise.all([mapView.when(), routeLayer.load()])
+  const results = await routeLayer.solve({ apiKey: esriConfig.apiKey })
+  routeLayer.update(results)
+  await mapView.goTo(routeLayer.routeInfo.geometry)
 })
 </script>
 
