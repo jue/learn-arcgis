@@ -12,7 +12,7 @@ import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import { FileSystemIconLoader } from 'unplugin-icons/loaders'
 
-// https://vitejs.dev/config/
+// https://vitejs.dev/config
 export default defineConfig({
   base: './',
   resolve: {
